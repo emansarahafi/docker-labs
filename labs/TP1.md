@@ -165,7 +165,6 @@ docker inspect <CONTAINER_ID> | grep Cmd
 Formattage Go Template :
 ```
 docker inspect --format '{{.Config.Cmd}}' <CONTAINER_ID>
-docker inspect --format '{{.NetworkSettings.IPAddress}}' <CONTAINER_ID>
 ```
 Inspecter toute la config :
 ```
