@@ -63,10 +63,7 @@ Lire le fichier précédemment créé :
 ```
 docker exec <CONTAINER_ID> ls -l
 ```
-Quitter :
-```
-exit
-```
+
 ### B.3 Liste des options utiles
 Voir les ID complets :
 ```
