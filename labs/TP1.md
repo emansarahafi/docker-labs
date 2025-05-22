@@ -180,6 +180,7 @@ docker run -d centos:7 sleep 300
 Arrêter un conteneur :
 ```
 docker stop <CONTAINER_ID>
+```
 Filtrer les conteneurs exited :
 ```
 docker ps -a --filter "status=exited"
