@@ -163,8 +163,8 @@ Connectez-vous à Docker Hub :
 
 ```bash
 docker login
-Retagger l’image :
 ```
+Retagger l’image :
 ```bash
 docker tag my-alpine:dev <DockerID>/my-alpine:dev
 docker push <DockerID>/my-alpine:dev
