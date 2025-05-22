@@ -1,11 +1,11 @@
-# 🐳 TP Docker - Création et gestion d’images avec Dockerfile
+# TP Docker - Création et gestion d’images avec Dockerfile
 
 ## Objectif
 Apprendre à créer, optimiser et gérer des images Docker à partir de Dockerfiles, en explorant les concepts de cache de build, CMD, ENTRYPOINT, multi-stage builds et Docker Hub.
 
 ---
 
-## 🧱 A. Créer des images avec des Dockerfiles (1/2)
+## A. Créer des images avec des Dockerfiles (1/2)
 
 ### A.1 Écrire et construire un Dockerfile
 
