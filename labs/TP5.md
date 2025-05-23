@@ -13,7 +13,7 @@ Mettre à l’échelle dynamiquement un service avec docker-compose up --scale
 ## 1. Préparation de l’application Dockercoins
 ### 1.1 Cloner le dépôt GitHub
 ```
-git clone https://github.com/docker/orchestration-workshop.git
+git clone https://github.com/docker-training/orchestration-workshop.git
 cd orchestration-workshop/dockercoins
 ```
 Cette application comprend 5 services :
@@ -28,25 +28,7 @@ redis : File d'attente des résultats
 
 webui : Frontend Web affichant le taux de hash
 
-### 1.2 Construction des images
-Remplace dans chaque Dockerfile ou dans le docker-compose.yml l’occurrence user/ par ton identifiant Docker Hub (ex. : monlogin/hasher).
-```
-#Connexion à Docker Hub
-docker login
-#Build et push des images
-docker build -t monlogin/hasher hasher
-docker push monlogin/hasher
 
-docker build -t monlogin/rng rng
-docker push monlogin/rng
-
-docker build -t monlogin/worker worker
-docker push monlogin/worker
-
-docker build -t monlogin/webui webui
-docker push monlogin/webui
-```
-🔧 Astuce : Modifie le docker-compose.yml pour référencer tes images poussées sur Docker Hub.
 
 ## 2. Démarrage de l'application
 ### 2.1 Lancement en mode interactif
