@@ -20,16 +20,17 @@ Vérifiez que l’interface docker0 correspond bien à l’IP de la passerelle d
 
 Installer et utiliser brctl pour visualiser les connexions au pont Docker :
 ```
+sudo apt update 
 sudo apt install bridge-utils
 brctl show docker0
 ```
 Aucune interface connectée au pont à ce stade.
 
 ### A.2 Connexion des conteneurs à docker0
-Démarrer un conteneur (ex : nginx) :
+Démarrer un conteneur (ex : ubuntu) :
 ```
-docker run -d --name demo-nginx nginx
-```
+docker run --name myubuntu --rm -d --cap-add=NET_ADMIN ubuntu sleep infinity
+
 Re-examiner le réseau (interfaces et ponts) :
 ```
 ip a
@@ -39,7 +40,9 @@ Une interface vethXXXX devrait apparaître liée à docker0.
 
 Entrer dans le conteneur et inspecter eth0 :
 ```
-docker exec -it demo-nginx bash
+docker exec -it myubuntu bash
+apt update && apt install -y iproute2 iputils-ping
+
 ip a
 ```
 Vous verrez une interface eth0@if7 reliée à l’hôte via le lien veth.
